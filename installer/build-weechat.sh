@@ -9,6 +9,9 @@
 weechat_home="/home/hauk/weechat/"
 install_dir=$weechat_home/build/
 tar_build="weechat.tar.gz"
+rb_weechat_home="/home/associat/h/hauk/weechat/"
+rb_user="hauk"
+rb_server="azazel.redbrick.dcu.ie"
 
 #gzip sources from http://weechat.org/download/ Note: Update this url to the latest tar.gz.
 wc_installer_url="http://weechat.org/files/src/weechat-0.4.2.tar.gz"
@@ -26,7 +29,7 @@ echo "tar filename is: " $weechat_tar
 #Untar the source tar.gz.
 tar -zxvf $weechat_home$weechat_tar -C $weechat_home
 
-weechat_untar=$(ls /home/hauk/weechat/ --ignore *.tar.gz | grep "weechat-0.*.*")
+weechat_untar=$(ls $weechat_home --ignore *.tar.gz | grep "weechat-0.*.*")
 
 echo "weechat untarred directory is:" $weechat_untar
 
@@ -51,4 +54,4 @@ cd $weechat_home
 #tar it up for transfer to azazazaaz.
 tar -zcvf $tar_build build/
 
-scp weechat.tar.gz hauk@azazel.redbrick.dcu.ie:/home/associat/h/hauk/weechat/
+scp weechat.tar.gz $rb_user@$rb_server:$rb_weechat_home
