@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Ensure you have all the dependencies installed for cmake:
+#Link: http://www.weechat.org/files/doc/stable/weechat_user.en.html#dependencies
+
 #remove the old .tar.gz
 #rm -rf ../../weechat-0.*.*.tar.gz
 
