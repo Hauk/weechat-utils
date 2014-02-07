@@ -54,4 +54,5 @@ cd $weechat_home
 #tar it up for transfer to azazazaaz.
 tar -zcvf $tar_build build/
 
+#SCP the tar to the users rb weechat folder.
 scp weechat.tar.gz $rb_user@$rb_server:$rb_weechat_home
