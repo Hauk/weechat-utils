@@ -1,0 +1,13 @@
+Todo:
+
+1. Review code in current version of bot.
+3. Copy over any existing classes to ~/weechat-utils/python/scripts folder.
+4. Re-think logic to updating IRC channel. Need to really figure out how to get it to send messages to channel without depending on someone saying something in the channel, which is what fuxxored everything up for the last attempt.
+ 
+Possibly use the system time instead of depending on parsing the current time from the channel sentence. Maybe get the current time and compare that to the time pulled from the database.
+
+Not sure I need the whole trheading business anymore. I'm sure it's doable without threads.
+
+I think the whole IRC class can be removed because the weechat api handles all that.
+
+The database code will basically remain the same. The users, reminders, dates and times should remain the same.
